@@ -1,0 +1,20 @@
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">Woei-Chyi Chang</a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>About</a></li>
+      <li><a href="{{ '/talks/' | relative_url }}" {% if page.url contains 'talks' %}class="active"{% endif %}>Awards</a></li>
+      <li><a href="{{ '/publications/' | relative_url }}" {% if page.url contains 'publications' %}class="active"{% endif %}>Publications</a></li>
+      <li><a href="{{ '/portfolio/' | relative_url }}" {% if page.url contains 'portfolio' %}class="active"{% endif %}>Projects</a></li>
+      <li><a href="{{ '/cv/' | relative_url }}" {% if page.url contains 'cv' %}class="active"{% endif %}>CV</a></li>
+      <li>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>

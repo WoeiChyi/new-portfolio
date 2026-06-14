@@ -1,0 +1,58 @@
+title: "Woei-Chyi Chang"
+description: "Postdoctoral Researcher | Purdue University"
+url: ""
+baseurl: ""
+
+author:
+  name: "Woei-Chyi Chang, Ph.D."
+  title: "Research Scientist"
+  organization: "Meta"
+  location: "Menlo Park, CA"
+  email: "woeichyichang@gmail.com"
+  google_scholar: "https://scholar.google.com/citations?user=5olDnTQAAAAJ&hl=en"
+  orcid: "https://orcid.org/0009-0001-7035-9823"
+  linkedin: "https://www.linkedin.com/in/woei-chyi-chang-24b1521a0"
+  avatar: "/assets/images/woeichyi.png"
+
+collections:
+  publications:
+    output: true
+    permalink: /publications/:path/
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+  talks:
+    output: true
+    permalink: /talks/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: page
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: page
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+markdown: kramdown
+highlighter: rouge
+
+include:
+  - _pages

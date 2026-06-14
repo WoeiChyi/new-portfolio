@@ -1,0 +1,187 @@
+---
+layout: default
+title: "About"
+permalink: /
+---
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-text">
+    <p class="hero-greeting">Hello, I'm</p>
+    <h1 class="hero-name">Woei-Chyi Chang</h1>
+    <p class="hero-title">Research Scientist (ML) @ Meta <i class="fa-brands fa-meta" style="margin-left:0.3rem;"></i></p>
+    <p class="hero-bio">
+      I am currently a Research Scientist (ML) at Meta (Menlo Park, CA). I received my Ph.D. in Civil Engineering (under supervision of Prof. Hasanzadeh) and M.S. in Electrical and Computer Engineering at Purdue University. My research focuses on Human-Autonomy Teaming, Digital Twins, Data Science, Wearable Sensing, Human Factors, and AR/VR/XR/MR. I have worked on multiple interdisciplinary projects funded by NSF, USDOT, and INDOT.
+    </p>
+    <div class="hero-social">
+      <a href="https://www.linkedin.com/in/woei-chyi-chang-24b1521a0" target="_blank">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/WoeiChyi" target="_blank">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+      <a href="https://scholar.google.com/citations?user=5olDnTQAAAAJ&hl=en" target="_blank">
+        <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+      </a>
+      <a href="mailto:woeichyichang@gmail.com">
+        <i class="fa-solid fa-envelope"></i> Gmail
+      </a>
+      <a href="https://orcid.org/0009-0001-7035-9823" target="_blank">
+        <i class="fa-solid fa-id-badge"></i> ORCID
+      </a>
+    </div>
+  </div>
+  <img src="{{ '/assets/images/woeichyi.png' | relative_url }}" alt="Woei-Chyi Chang" class="hero-photo">
+</section>
+
+<!-- Work & Education -->
+<section class="section">
+  <p class="section-label">Background</p>
+  <div class="timeline-grid">
+
+    <!-- Work Experience -->
+    <div class="timeline-col">
+      <h3 class="timeline-col-title"><i class="fa-solid fa-briefcase"></i> Work Experience</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2026–Present</div>
+          <div class="timeline-body">
+            <strong>Research Scientist (ML)</strong>
+            <span>Meta &mdash; Menlo Park, CA</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2025–2026</div>
+          <div class="timeline-body">
+            <strong>Postdoctoral Researcher</strong>
+            <span>Purdue University &mdash; USA</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021–2025</div>
+          <div class="timeline-body">
+            <strong>Research Assistant</strong>
+            <span>Purdue University &mdash; USA</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2020–2021</div>
+          <div class="timeline-body">
+            <strong>Research Assistant</strong>
+            <span>National Taiwan University &mdash; Taiwan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="timeline-col">
+      <h3 class="timeline-col-title"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021–2025</div>
+          <div class="timeline-body">
+            <strong>Ph.D. in Civil &amp; Construction Engineering</strong>
+            <span>Purdue University &mdash; USA</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2022–2024</div>
+          <div class="timeline-body">
+            <strong>M.S. in Electrical &amp; Computer Engineering</strong>
+            <span>Purdue University &mdash; USA</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2019</div>
+          <div class="timeline-body">
+            <strong>Exchange — Civil &amp; Environmental Engineering</strong>
+            <span>TU Darmstadt &mdash; Germany</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2017–2020</div>
+          <div class="timeline-body">
+            <strong>M.S. in Civil Engineering</strong>
+            <span>National Taiwan University &mdash; Taiwan</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2013–2017</div>
+          <div class="timeline-body">
+            <strong>B.S. in Civil Engineering</strong>
+            <span>National Taiwan University &mdash; Taiwan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Research Interests -->
+<section class="section">
+  <p class="section-label">Research Interests</p>
+  <div class="tags">
+    <span class="tag">AI/ML</span>
+    <span class="tag">Digital Twins</span>
+    <span class="tag">Human-Autonomy Teaming</span>
+    <span class="tag">Wearable Sensing</span>
+    <span class="tag">Human Factors</span>
+    <span class="tag">AR / VR / XR / MR</span>
+    <span class="tag">Construction Safety</span>
+  </div>
+</section>
+
+<!-- Recent Publications (commented out)
+<section class="section">
+  <p class="section-label">Recent Publications</p>
+  <div class="pub-list">
+    {% assign sorted_pubs = site.publications | sort: 'date' | reverse %}
+    {% for pub in sorted_pubs limit:3 %}
+    <div class="pub-item">
+      <span class="pub-venue">{{ pub.venue }}</span>
+      <p class="pub-title">
+        {% if pub.paperurl %}<a href="{{ pub.paperurl }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+        {% if pub.category %}<span class="pub-category">{{ pub.category }}</span>{% endif %}
+      </p>
+      <p class="pub-meta">{{ pub.date | date: "%Y" }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="section-footer">
+    <a href="{{ '/publications/' | relative_url }}">View all publications &rarr;</a>
+  </div>
+</section>
+-->
+
+<!-- Map -->
+<section class="section">
+  <p class="section-label">Locations</p>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <div id="map"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var map = L.map('map').setView([30, 10], 2);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 18,
+      }).addTo(map);
+      L.marker([40.4237, -86.9212]).addTo(map).bindPopup('Purdue University');
+      L.marker([25.0173, 121.5398]).addTo(map).bindPopup('National Taiwan University');
+      L.marker([49.8719, 8.6512]).addTo(map).bindPopup('TU Darmstadt');
+      L.marker([37.4529, -122.1817]).addTo(map).bindPopup('Meta — Menlo Park, CA');
+      setTimeout(function () { map.invalidateSize(); }, 300);
+    });
+  </script>
+</section>

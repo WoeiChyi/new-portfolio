@@ -1,0 +1,95 @@
+---
+layout: default
+title: "Publications"
+permalink: /publications/
+---
+<div class="page-container">
+  <header class="page-header">
+    <h1 class="page-title">Publications</h1>
+  </header>
+
+  {% assign sorted_pubs = site.publications | sort: 'date' | reverse %}
+  {% assign first_journals = sorted_pubs | where: "category", "manuscripts" | where: "role", "first" %}
+  {% assign co_journals    = sorted_pubs | where: "category", "manuscripts" | where: "role", "co" %}
+  {% assign chapters       = sorted_pubs | where: "category", "chapters" %}
+  {% assign conferences    = sorted_pubs | where: "category", "conferences" %}
+  {% assign reports        = sorted_pubs | where: "category", "reports" %}
+
+  {% if first_journals.size > 0 %}
+  <h2 class="pub-section-heading">Journal Articles (First Author)</h2>
+  <div class="pub-list" style="margin-bottom:3rem;">
+    {% for pub in first_journals %}
+    <div class="pub-item">
+      <span class="pub-venue">{{ pub.venue }}</span>
+      <p class="pub-title">
+        {% if pub.paperurl %}<a href="{{ pub.paperurl }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+      </p>
+      {% if pub.citation %}<p class="pub-meta">{{ pub.citation | strip_html }}</p>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if co_journals.size > 0 %}
+  <h2 class="pub-section-heading">Journal Articles (Co-Author)</h2>
+  <div class="pub-list" style="margin-bottom:3rem;">
+    {% for pub in co_journals %}
+    <div class="pub-item">
+      <span class="pub-venue">{{ pub.venue }}</span>
+      <p class="pub-title">
+        {% if pub.paperurl %}<a href="{{ pub.paperurl }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+      </p>
+      {% if pub.citation %}<p class="pub-meta">{{ pub.citation | strip_html }}</p>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if chapters.size > 0 %}
+  <h2 class="pub-section-heading">Book Chapters</h2>
+  <div class="pub-list" style="margin-bottom:3rem;">
+    {% for pub in chapters %}
+    <div class="pub-item">
+      <span class="pub-venue">{{ pub.venue }}</span>
+      <p class="pub-title">
+        {% if pub.paperurl %}<a href="{{ pub.paperurl }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+      </p>
+      {% if pub.citation %}<p class="pub-meta">{{ pub.citation | strip_html }}</p>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if conferences.size > 0 %}
+  <h2 class="pub-section-heading">Conference Proceedings</h2>
+  <div class="pub-list" style="margin-bottom:3rem;">
+    {% for pub in conferences %}
+    <div class="pub-item">
+      <span class="pub-venue">{{ pub.venue }}</span>
+      <p class="pub-title">
+        {% if pub.paperurl %}<a href="{{ pub.paperurl }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+        {% if pub.role == "co" %}<span class="pub-category">co-author</span>{% endif %}
+        {% if pub.award %}<span class="pub-award"><i class="fa-solid fa-trophy"></i> {{ pub.award }}</span>{% endif %}
+      </p>
+      {% if pub.citation %}<p class="pub-meta">{{ pub.citation | strip_html }}</p>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if reports.size > 0 %}
+  <h2 class="pub-section-heading">Technical Reports</h2>
+  <div class="pub-list">
+    {% for pub in reports %}
+    <div class="pub-item">
+      <span class="pub-venue">{{ pub.venue }}</span>
+      <p class="pub-title">
+        {% if pub.paperurl %}<a href="{{ pub.paperurl }}" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+      </p>
+      {% if pub.citation %}<p class="pub-meta">{{ pub.citation | strip_html }}</p>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+</div>
