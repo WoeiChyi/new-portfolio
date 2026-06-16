@@ -193,13 +193,13 @@ ul { list-style: none; }
   background: var(--bg-surface);
 }
 .hero-photo {
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center 15%;
-  border: 3px solid var(--border);
-  box-shadow: var(--shadow-md);
+  border: none;
+  box-shadow: none;
   flex-shrink: 0;
 }
 .hero-photo-placeholder {
@@ -854,8 +854,8 @@ ul { list-style: none; }
     gap: 2rem;
   }
   .hero-photo, .hero-photo-placeholder {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     order: -1;
   }
   .info-grid { grid-template-columns: 1fr; gap: 1.5rem; }
