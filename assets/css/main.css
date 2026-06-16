@@ -197,7 +197,7 @@ ul { list-style: none; }
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 15%;
+  object-position: 35% 15%;
   border: none;
   box-shadow: none;
   flex-shrink: 0;
